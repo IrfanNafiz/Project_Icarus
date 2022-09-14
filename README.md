@@ -3,7 +3,7 @@
 Whipped up this mess back in 2020, during initial covid lockdowns.
 If you're here, sup, you're welcome for my absolutely messy code.
 
-I don't remmeber how and from where I got the code for this, but I remember following Brackeys and Sebastian Lague on youtube for my gamedev experiments. These code are most likely their codes, just 'spaghettified' and jotted together. 
+I don't remmeber how and from where I got the code for this, but I remember following Brackeys and Sebastian Lague on youtube for my gamedev experiments. These are most likely their codes, just 'spaghettified' and jotted together. 
 
 Here are some screenshots.
 
