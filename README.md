@@ -2,7 +2,7 @@
 
 Whipped up this mess back in 2020, during initial covid lockdowns.
 
-I don't remmeber how I made this, or where I got any code if I reused them, but I remember following [Brackeys](https://www.youtube.com/c/Brackeys) and [Sebastian Lague](https://www.youtube.com/c/SebastianLague) on youtube for my gamedev experiments. 
+I don't remember how I made this, or where I got any code if I reused them, but I remember following [Brackeys](https://www.youtube.com/c/Brackeys) and [Sebastian Lague](https://www.youtube.com/c/SebastianLague) on youtube for my gamedev experiments. 
 
 Here are some screenshots.
 
