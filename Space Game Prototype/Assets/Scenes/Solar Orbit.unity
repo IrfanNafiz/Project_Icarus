@@ -2181,7 +2181,7 @@ GameObject:
   - component: {fileID: 1331416648}
   - component: {fileID: 1331416647}
   m_Layer: 0
-  m_Name: SunBODY
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2194,10 +2194,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 2072934141}
     - target: {fileID: 1807548984367851108, guid: 1321c9c6edadeaf44aa936b4e5e6266c,
         type: 3}
       propertyPath: m_RootOrder
