@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18341476, g: 0.227326, b: 0.2962145, a: 1}
+  m_IndirectSpecularColor: {r: 0.45088774, g: 0.49918145, b: 0.56593966, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14833,7 +14833,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474810075}
-  m_LocalRotation: {x: 0.0005596095, y: 0.9958675, z: -0.09060788, w: 0.0061506447}
+  m_LocalRotation: {x: 0.00055961, y: 0.9958675, z: -0.090607874, w: 0.0061506517}
   m_LocalPosition: {x: -11.06446, y: 48.18498, z: 158.36006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -25287,8 +25287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187bcf02da2840948a3963fcf6f5bb9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 10
-  rigidBody: {fileID: 0}
+  force: 0
+  rigidBody: {fileID: 1572310531}
 --- !u!1 &1798309600
 GameObject:
   m_ObjectHideFlags: 0
@@ -31277,6 +31277,7 @@ GameObject:
   - component: {fileID: 27261409157658113}
   - component: {fileID: 2115250448248902214}
   - component: {fileID: 7289658958838716212}
+  - component: {fileID: 7289658958838716213}
   m_Layer: 0
   m_Name: Cylinder.002
   m_TagString: Untagged
@@ -32690,6 +32691,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7289658958838716213
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2860566527211686993}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8316189, y: 1.831619, z: 3.991002}
+  m_Center: {x: 0.00000016274515, y: -0.000000045799666, z: 0.4640317}
 --- !u!23 &7348946588729664069
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -33192,6 +33206,7 @@ GameObject:
   - component: {fileID: 3157737497573557878}
   - component: {fileID: 1349282044235436462}
   - component: {fileID: 5159411329087576407}
+  - component: {fileID: 8471499468438775308}
   m_Layer: 0
   m_Name: CentralBooster
   m_TagString: Untagged
@@ -33199,6 +33214,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &8471499468438775308
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8471499468438775307}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8316195, y: 1.8316195, z: 6.356582}
+  m_Center: {x: 0.00000042564434, y: -0.00000037407384, z: 1.6468217}
 --- !u!33 &8523973680726124850
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -33323,6 +33351,7 @@ GameObject:
   - component: {fileID: 985945601109874319}
   - component: {fileID: 4137172732629924689}
   - component: {fileID: 4849057761967123737}
+  - component: {fileID: 8981131216983765898}
   m_Layer: 0
   m_Name: Cylinder.009
   m_TagString: Untagged
@@ -33330,6 +33359,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &8981131216983765898
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8981131216983765897}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8316189, y: 1.831619, z: 3.991002}
+  m_Center: {x: 0.0000011164195, y: -0.00000010540431, z: 0.4640317}
 --- !u!23 &9037404746103123166
 MeshRenderer:
   m_ObjectHideFlags: 0
