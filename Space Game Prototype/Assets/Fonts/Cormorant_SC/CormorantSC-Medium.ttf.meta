@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: b69e4e82f67ba2c41b12149da0be3cfb
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Cormorant SC
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 727c6d8d958ff5946bf7fffc4fbe8876, type: 3}
+  - {fileID: 12800000, guid: 4288e9a5acdc697479e99d6a32df33c3, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

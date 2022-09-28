@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: c61b97b27083f41419b9b21b6c1c7fd3
+  - enabled: 1
+    path: Assets/Scenes/Venus Flyby.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Solar Orbit.unity
+    guid: 15657b76f2b32a843b559d6afeda8ee8
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 34dd279ba8700454194ee470dcf72190
   m_configObjects: {}

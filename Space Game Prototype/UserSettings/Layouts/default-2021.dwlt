@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 183
+  controlID: 122
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 184
+  controlID: 110
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 185
+  controlID: 111
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,8 +187,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 362
-    height: 559
+    width: 322
+    height: 547.3333
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
@@ -206,24 +206,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 362
     y: 0
-    width: 1105
-    height: 559
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
+    width: 981.3334
+    height: 547.3333
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 14}
   - {fileID: 15}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 2
+  m_Selected: 2
+  m_LastSelected: 0
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -313,7 +313,7 @@ MonoBehaviour:
     Game Prototype\Library\PlayModeViewStates\2fc0295327a73c24ba8d2b5e7d710b3f
   m_PlayModeViewName: GameView
   m_ShowGizmos: 0
-  m_TargetDisplay: 3
+  m_TargetDisplay: 4
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
   m_TargetSize: {x: 979.3334, y: 505.3333}
   m_TextureFilterMode: 0
@@ -405,23 +405,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: ba530000
       m_LastClickedID: 0
-      m_ExpandedIDs: 2ab5ffff
+      m_ExpandedIDs: de9dffff58a2ffffa0a3ffff1aaaffff64aeffff5aafffff58b0ffff4eb1ffff84b2ffff7ab3fffff4b5ffffe0b6fffffec4ffff16c7ffff54ccffff3aceffffbcd4ffff92f8ffff84f9ffff38fbffffa25400000258000064580000145a0000b85b0000ec6000009e690000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Camera [PSP Follower] Display 3
+        m_OriginalName: Camera [PSP Follower] Display 3
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -22138
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -541,7 +541,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 0
+      displayed: 1
       snapOffset: {x: 0, y: 24.666666}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -690,9 +690,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.896079, y: 12.284015, z: -8.659227}
+    m_Target: {x: 40.191658, y: 32.80288, z: 48.837276}
     speed: 2
-    m_Value: {x: -2.896079, y: 12.284015, z: -8.659227}
+    m_Value: {x: 40.191658, y: 32.80288, z: 48.837276}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -739,13 +739,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.059542414, y: 0.93412554, z: -0.30441847, w: 0.17795394}
+    m_Target: {x: 0.16435148, y: 0.45509237, z: -0.08585398, w: 0.8709511}
     speed: 2
-    m_Value: {x: 0.059528306, y: 0.93390423, z: -0.30434635, w: 0.17791177}
+    m_Value: {x: 0.1669596, y: 0.454822, z: -0.08721691, w: 0.87043357}
   m_Size:
-    m_Target: 22.938683
+    m_Target: 16.834633
     speed: 2
-    m_Value: 22.938683
+    m_Value: 16.834633
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -849,14 +849,15 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Standard Assets/Cameras/Prefabs
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: F:\NSAC 2022\Project_Icarus\Space Game Prototype
+  m_LastProjectPath: F:\Documents (Laptop)\GameDevelopment\Space-Sim-Prototype\Space
+    Game Prototype
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 101}
-    m_SelectedIDs: f4a20000
-    m_LastClickedID: 41716
-    m_ExpandedIDs: 00000000ea660000f4660000fa660000ee9d000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: c2520000
+    m_LastClickedID: 21186
+    m_ExpandedIDs: 00000000b252000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -884,7 +885,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ea66000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000b2520000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

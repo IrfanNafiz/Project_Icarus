@@ -38,7 +38,7 @@ public class StellarBody : GravityXp
         };
     }
 
-    public void UpdateVelocity(Vector3 gravitationalAcceleration, float timeStep)
+    public void UpdateVelocity(Vector3 gravitationalAcceleration, float timeStep) // is this even necessary? Dont know, not removing this cause dont wanna break my damn code.
     {
         currentVelocity += gravitationalAcceleration * timeStep;
     }
