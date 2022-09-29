@@ -60,21 +60,21 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: ButtonPress
-    clip: {fileID: 8300000, guid: 76800dbe14a0fb148a8694939d08777a, type: 3}
+    clip: {fileID: 8300000, guid: 5ca1cfb158496de4888446aebabadcc8, type: 3}
     audioMixerGroup: {fileID: 24300002, guid: bd96cc3b8bee15845b4a931900c7ea70, type: 2}
     volume: 0.262
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Countdown
-    clip: {fileID: 8300000, guid: 8fc426f26697bc94882902dc99878f8a, type: 3}
+    clip: {fileID: 8300000, guid: 683ac423c7fe2474aa2295076132a8a9, type: 3}
     audioMixerGroup: {fileID: 24300002, guid: bd96cc3b8bee15845b4a931900c7ea70, type: 2}
     volume: 0.262
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Launch
-    clip: {fileID: 8300000, guid: d7ad808d1ed5cc74caa546de35b65f02, type: 3}
+    clip: {fileID: 8300000, guid: 995d8ca25d3748f42afe88dca045312e, type: 3}
     audioMixerGroup: {fileID: 24300002, guid: bd96cc3b8bee15845b4a931900c7ea70, type: 2}
     volume: 0.262
     pitch: 1
