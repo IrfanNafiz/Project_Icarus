@@ -88,5 +88,11 @@ public class Manager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Tab)){
             IsPaused = !IsPaused;
         }
+
+        if(!activeCam.GetComponent<CameraProps>().AllowProbeText) {
+            ParkerSolarProbe.GetComponent<SphereCollider>().enabled = false;
+        } else {
+            ParkerSolarProbe.GetComponent<SphereCollider>().enabled = true;
+        }
     }
 }
