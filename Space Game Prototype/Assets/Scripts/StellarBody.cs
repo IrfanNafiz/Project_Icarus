@@ -4,20 +4,26 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [RequireComponent(typeof(Rigidbody))]
-public class StellarBody : GravityXp
+public class StellarBody : MonoBehaviour
 {
     public static float gravConstant = 6.67384e-11f;
 
-    public Rigidbody rb;
+    private Rigidbody rb;
     public float radius;
     public Vector3 initialVelocity;
     public string bodyName = "Unnamed";
     public float surfaceGravity;
     Transform meshHolder;
     public float mass { get; private set; }
-    public Vector3 currentVelocity { get; private set; }
+    public Vector3 currentVelocity; // { get; public set; }
+
 
     private void Awake()
+    {
+        initialize();
+    }
+
+    public void initialize()
     {
         rb = GetComponent<Rigidbody>();
         currentVelocity = initialVelocity;
@@ -26,6 +32,8 @@ public class StellarBody : GravityXp
 
     public void UpdateVelocity(StellarBody[] allBodies, float timeStep)
     {
+
+        Debug.Log("update called for " + bodyName);
         foreach (var otherBody in allBodies)
         {
             if (otherBody != this)
