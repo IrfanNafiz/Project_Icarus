@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Playables;
 using Cinemachine;
 using Unity.VisualScripting;
@@ -14,6 +15,10 @@ public class scene : MonoBehaviour
     private GameObject rocket_flames_container, floor_smoke_container;
     private ParticleSystem[] rocket_flames, floor_smokes;
     private takeoff takeoff_script;
+
+    public GameObject mainMenuUI;
+    public GameObject UI;
+
 
     public bool init_anim_complete = false;
 
@@ -57,13 +62,20 @@ public class scene : MonoBehaviour
         if (init_anim_complete)
         {
             camera_switcher.switchCamera(round_cam);
+            mainMenuUI.SetActive(true);
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            foreach (ParticleSystem p in rocket_flames) p.Play();
-            foreach (ParticleSystem p in floor_smokes) p.Play();
-            takeoff_script.launch();
+            LaunchStart();
         }
+    }
+
+    public void LaunchStart()
+    {
+        UI.SetActive(false);
+        foreach (ParticleSystem p in rocket_flames) p.Play();
+        foreach (ParticleSystem p in floor_smokes) p.Play();
+        takeoff_script.launch();
     }
 }

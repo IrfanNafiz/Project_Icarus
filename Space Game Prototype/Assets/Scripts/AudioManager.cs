@@ -38,13 +38,13 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        int x = Random.Range(0, 2);
-        if (x == 0)
-            Play("Theme");
-        else
-            Play("Theme2");
+        //int x = Random.Range(0, 2);
+        //if (x == 0)
+        //    Play("Theme");
+        //else
+        //    Play("Theme2");
 
-        //Play("Theme");
+        Play("Theme");
     }
 
     //private void Update()
