@@ -27,6 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: 34dd279ba8700454194ee470dcf72190
   - enabled: 1
-    path: Assets/SimpleKeplerOrbits/Examples/Death.unity
+    path: Assets/Scenes/Death.unity
     guid: 87fa2632687f288439698fc24df81f4b
   m_configObjects: {}

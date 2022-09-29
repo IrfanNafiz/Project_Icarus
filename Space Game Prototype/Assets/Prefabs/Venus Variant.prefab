@@ -123,8 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0445bb043f3dffb40ba5984363a62206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 797628751}
   radius: 6
   initialVelocity: {x: 0, y: 0, z: 1}
   bodyName: Venus
   surfaceGravity: 5
+  currentVelocity: {x: 0, y: 0, z: 0}

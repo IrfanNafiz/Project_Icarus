@@ -863,11 +863,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0445bb043f3dffb40ba5984363a62206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 2072934138}
   radius: 1
   initialVelocity: {x: 0, y: 0, z: 12}
   bodyName: PSP
   surfaceGravity: 1.67
+  currentVelocity: {x: 0, y: 0, z: 0}
 --- !u!1 &6419695160147136771
 GameObject:
   m_ObjectHideFlags: 0
