@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.054941878, g: 0.049268633, b: 0.057899386, a: 1}
+  m_IndirectSpecularColor: {r: 0.053152956, g: 0.050175972, b: 0.054744966, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -900,6 +900,52 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6409325884422245875, guid: ccd8f24a10106a240a7d0d13c899959e,
+        type: 3}
+      propertyPath: sounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409325884422245875, guid: ccd8f24a10106a240a7d0d13c899959e,
+        type: 3}
+      propertyPath: sounds.Array.data[0].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409325884422245875, guid: ccd8f24a10106a240a7d0d13c899959e,
+        type: 3}
+      propertyPath: sounds.Array.data[1].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409325884422245875, guid: ccd8f24a10106a240a7d0d13c899959e,
+        type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 76800dbe14a0fb148a8694939d08777a, type: 3}
+    - target: {fileID: 6409325884422245875, guid: ccd8f24a10106a240a7d0d13c899959e,
+        type: 3}
+      propertyPath: sounds.Array.data[2].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409325884422245875, guid: ccd8f24a10106a240a7d0d13c899959e,
+        type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: ButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409325884422245875, guid: ccd8f24a10106a240a7d0d13c899959e,
+        type: 3}
+      propertyPath: sounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409325884422245875, guid: ccd8f24a10106a240a7d0d13c899959e,
+        type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.262
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409325884422245875, guid: ccd8f24a10106a240a7d0d13c899959e,
+        type: 3}
+      propertyPath: sounds.Array.data[2].audioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: bd96cc3b8bee15845b4a931900c7ea70,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccd8f24a10106a240a7d0d13c899959e, type: 3}
 --- !u!4 &6576603218615735605

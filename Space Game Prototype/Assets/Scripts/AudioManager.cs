@@ -38,43 +38,54 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        int x = Random.Range(0, 2);
-        if (x == 0)
-            Play("Theme");
-        else
-            Play("Theme2");
+        //int x = Random.Range(0, 2);
+        //if (x == 0)
+        //    Play("Theme");
+        //else
+        //    Play("Theme2");
 
-        //Play("Theme");
+        Play("Theme");
     }
 
-    //private void Update()
-    //{
-    //    foreach (Sound s in sounds)
-    //    {
-    //        if (s.name == "Theme" && s.source.isPlaying == false)
-    //        {
-    //            foreach (Sound s2 in sounds)
-    //            {
-    //                if (s2.name == "Theme2" && s.source.isPlaying == false)
-    //                {
-    //                        Play("Theme2");
-    //                }
-    //            }
+    private void Update()
+    {
+        //foreach (Sound s in sounds)
+        //{
+        //    if (s.name == "Theme" && s.source.isPlaying == true)
+        //    {
+        //        break;
+        //    }
 
-    //        }
-    //        else if (s.name == "Theme2")
-    //        {
-    //            if (s.source.isPlaying == true)
-    //            {
-    //                continue;
-    //            }
-    //            if (s.source.isPlaying == false)
-    //            {
-    //                Play("Theme");
-    //            }
-    //        }
-    //    }
-    //}
+        //    else (s.name == "Theme" && s.source.isPlaying == false)
+        //    {
+        //        foreach (Sound s2 in sounds)
+        //        {
+        //            if (s2.name == "Theme2" && s.source.isPlaying == false)
+        //            {
+        //                Play("Theme2");
+        //            }
+        //        }
+
+        //    }
+
+        //    if (s.name == "Theme2" && s.source.isPlaying == true)
+        //    {
+        //        break;
+        //    }
+
+        //    else (s.name == "Theme2" && s.source.isPlaying == false)
+        //    {
+        //        foreach (Sound s2 in sounds)
+        //        {
+        //            if (s2.name == "Theme" && s.source.isPlaying == false)
+        //            {
+        //                Play("Theme");
+        //            }
+        //        }
+        //    }
+        //}
+
+    }
 
     public void Play(string name) 
     {
