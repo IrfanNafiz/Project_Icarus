@@ -8,7 +8,6 @@ Space*Game*Prototype/UserSettings/**/**
 Space*Game*Prototype/UserSettings/**
 
 
-
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -67,4 +66,3 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
-
