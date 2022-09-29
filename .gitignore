@@ -4,7 +4,10 @@
 #
 #ignore folders
 Screenshots
-**UserSettings**/**/*
+Space*Game*Prototype/UserSettings/**/**
+Space*Game*Prototype/UserSettings/**
+
+
 
 [Ll]ibrary/
 [Tt]emp/
