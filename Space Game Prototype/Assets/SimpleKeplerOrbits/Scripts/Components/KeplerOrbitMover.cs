@@ -13,6 +13,7 @@ namespace SimpleKeplerOrbits
 	public class KeplerOrbitMover : MonoBehaviour
 	{
 		private GameObject Manager;
+		public Material DisintegrateMaterial;
 		/// <summary>
 		/// The attractor settings data.
 		/// Attractor object reference must be assigned or orbit mover will not work.
@@ -391,25 +392,25 @@ namespace SimpleKeplerOrbits
 
 		private void Break()
 		{
+			Manager.GetComponent<Manager>().IsPaused = true;
 			IsBreaking = true;
 			// GetComponent<TrailRenderer>().enabled = false;
 			TimeScale = 0.5f;
 			SpiralIn = false;
 			AttractorSettings.AttractorMass = 4000;
-			Manager.GetComponent<Manager>().IsPaused = true;
 			Manager.GetComponent<Manager>().SwitchToFinalShot();
-			StartCoroutine(DestroyMeshCoroutine());
+			// StartCoroutine(DestroyMeshCoroutine());
 		}
 
 		IEnumerator DestroyMeshCoroutine() {
-			var destroyable = FindObjectsOfType<MeshDestroy>();
-			while(destroyable.Length > 0) {
+			while(true) {
+				var destroyable = FindObjectsOfType<MeshDestroy>();
+				if(destroyable.Length <= 0) break;
+				yield return new WaitForSeconds(1f);
+				// Debug.Log("Destroyable Length: " + destroyable.Length);
 				foreach(MeshDestroy item in destroyable) {
-					if (item.GetComponent<MeshDestroy>().priority == 0) item.GetComponent<MeshDestroy>().DestroyMesh();
-					item.GetComponent<MeshDestroy>().priority -= 1;
+					item.GetComponent<MeshDestroy>().QueueBreak(DisintegrateMaterial);
 				}
-				yield return new WaitForSeconds(2);
-				destroyable = FindObjectsOfType<MeshDestroy>();
 			}
 		}
 	}

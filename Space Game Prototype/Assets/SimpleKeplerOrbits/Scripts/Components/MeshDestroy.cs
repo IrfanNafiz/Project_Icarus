@@ -14,6 +14,8 @@ public class MeshDestroy : MonoBehaviour
     public float ExplodeForce = 0;
     public int priority = 0;
 
+    // public Material DisintegrateMaterial;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +27,33 @@ public class MeshDestroy : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
-            if(priority == 0) DestroyMesh();
-            priority--;
+            Apart();
         }
+    }
+
+    public void Apart(){
+        if (priority == 0) {
+            DestroyMesh();
+        }
+        priority--;
+    }
+
+    private IEnumerator increaseW(){
+        for(float i = 0f; i < 1f; i += 0.01f) {
+            GetComponent<Renderer>().material.SetFloat("_Weight", i);
+            yield return new WaitForSeconds(0.1f);
+        }
+        Destroy(gameObject);
+    }
+
+    public void QueueBreak(Material dis) {
+        if(priority == 0) {
+            GetComponent<Renderer>().material = dis;
+            Debug.Log(GetComponent<Renderer>().material.GetFloat("_Weight"));
+            GetComponent<Renderer>().material.SetFloat("_Weight", 0f);
+            StartCoroutine(increaseW());
+        }//DestroyMesh();
+        priority--;
     }
 
     public void DestroyMesh()
