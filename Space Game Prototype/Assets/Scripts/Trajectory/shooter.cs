@@ -64,23 +64,25 @@ public class shooter : MonoBehaviour
 
         if( Input.GetKey(KeyCode.UpArrow) )
         {
-            velocity += 1f;
+            velocity += 0.1f;
         } else if( Input.GetKey(KeyCode.DownArrow) )
         {
-            velocity -= 1f;
+            velocity -= 0.1f;
         } 
         
         if( Input.GetKey( KeyCode.LeftArrow ) )
         {
-            angle += 1f;
+            angle += 0.1f;
         } else if (Input.GetKey(KeyCode.RightArrow))
         {
-            angle -= 1f;
+            angle -= 0.1f;
         }
 
         velocity_vector.x = Mathf.Cos(Mathf.Deg2Rad * angle);
         velocity_vector.z = Mathf.Sin(Mathf.Deg2Rad * angle);
 
         velocity_vector *= velocity;
+
+        //VectorLine.SetLine(Color.white, Vector2(100, 50), Vector2(250, 120));
     }
 }

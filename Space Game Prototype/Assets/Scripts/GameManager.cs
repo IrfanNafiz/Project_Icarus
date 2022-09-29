@@ -73,6 +73,11 @@ public class GameManager : MonoBehaviour
         menuChangeUI.SetActive(true); //LoadNextLevel function is called from animation from NextLevel script
     }
 
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     public void StartSceneTransitionClose()
     {
         sceneBeginUI.SetActive(false); //this is called at the end of the scene begin transition to make sure it's off
