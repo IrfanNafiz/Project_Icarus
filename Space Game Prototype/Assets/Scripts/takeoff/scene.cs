@@ -74,8 +74,16 @@ public class scene : MonoBehaviour
     public void LaunchStart()
     {
         UI.SetActive(false);
+        FindObjectOfType<AudioManager>().Play("Countdown");
+        Invoke("Launch", 10.0f);
+    }
+
+    public void Launch()
+    {
+        FindObjectOfType<AudioManager>().Play("Launch");
         foreach (ParticleSystem p in rocket_flames) p.Play();
         foreach (ParticleSystem p in floor_smokes) p.Play();
         takeoff_script.launch();
     }
+
 }
