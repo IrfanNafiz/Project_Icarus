@@ -1,32 +1,89 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Simulation : MonoBehaviour
 {
     public static float physicsTimeStep = 0.01f;
+    public string name = "default";
 
-    StellarBody[] bodies;
-    static Simulation instance;
+    public List<StellarBody> bodies = new List<StellarBody>();
+    public static Simulation instance;
 
     void Awake()
     {
 
-        bodies = FindObjectsOfType<StellarBody>();
+        StellarBody[] bodies_arr = FindObjectsOfType<StellarBody>();
+        
+        foreach( StellarBody s in bodies_arr )
+        {
+            bodies.Add( s );
+        }
+        
         Time.fixedDeltaTime = physicsTimeStep;
         Debug.Log("Setting fixedDeltaTime to: " + physicsTimeStep);
     }
 
+    public void AddBody(StellarBody s)
+    {
+        // bodies.Append(body);
+
+        Debug.Log("before: " + bodies.Count);
+        foreach (StellarBody body in bodies)
+        {
+            Debug.Log("before: " + body.bodyName);
+        }
+
+        bodies.Add(s);
+
+        Debug.Log("after: " + bodies.Count);
+        foreach (StellarBody body in bodies)
+        {
+            Debug.Log("after: " + body.bodyName);
+        }
+
+    }
+
+    public void RemoveBody( StellarBody s )
+    {
+        List<StellarBody> bodies_temp = new List<StellarBody>();
+
+        Debug.Log("before: " + bodies.Count);
+        foreach( StellarBody body in bodies )
+        {
+            Debug.Log("before: " + body.bodyName);
+        }
+
+        foreach (StellarBody body in bodies)
+        {
+            if (body.bodyName != s.bodyName) bodies_temp.Add(body);
+        }
+
+        Debug.Log("Removed " + (bodies.Count - bodies_temp.Count) );
+
+        bodies = bodies_temp;
+
+    }
+    
+
+
     void FixedUpdate()
     {
-        for (int i = 0; i < bodies.Length; i++)
+        Debug.Log("Sim name: " + name + " body count: " + bodies.Count);
+        foreach (StellarBody body in bodies)
+        {
+            Debug.Log("bodies: " + body.bodyName);
+        }
+        
+        for (int i = 0; i < bodies.Count; i++)
         {
             Vector3 acceleration = CalculateAcceleration(bodies[i].Position, bodies[i]);
             bodies[i].UpdateVelocity(acceleration, physicsTimeStep);
             //bodies[i].UpdateVelocity (bodies, Universe.physicsTimeStep);
         }
 
-        for (int i = 0; i < bodies.Length; i++)
+        for (int i = 0; i < bodies.Count; i++)
         {
             bodies[i].UpdatePosition(physicsTimeStep);
         }
@@ -49,7 +106,7 @@ public class Simulation : MonoBehaviour
         return acceleration;
     }
 
-    public static StellarBody[] Bodies
+    public static List<StellarBody> Bodies
     {
         get
         {
@@ -57,7 +114,7 @@ public class Simulation : MonoBehaviour
         }
     }
 
-    static Simulation Instance
+    public static Simulation Instance
     {
         get
         {
