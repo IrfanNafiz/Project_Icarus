@@ -13,6 +13,8 @@ public static class CameraSwitcher
         return cam == active;
     }
 
+    // public static CinemachineFreeLookCamera freecam = null;
+
     public static void SwitchCam(CinemachineVirtualCamera cam) {
         cam.Priority = 10;
         active = cam;

@@ -7,6 +7,7 @@ using Cinemachine;
 
 public class Manager : MonoBehaviour
 {
+    public Dictionary<string, string> infoDictionary = new Dictionary<string, string>();
     [SerializeField] GameObject[] planets;
 
     [SerializeField] GameObject ParkerSolarProbe;
@@ -19,6 +20,7 @@ public class Manager : MonoBehaviour
     public TMP_Text camText;
     public TMP_Text ProbeText;
     public TMP_Text BreakText;
+    public TMP_Text InformationText;
 
     public GameObject CameraPerson;
     private CameraPerson CameraPersonScript;
@@ -26,6 +28,7 @@ public class Manager : MonoBehaviour
     public Vector3 probeTextOffset;
 
     private bool IsBreaking = false;
+    private bool InspectionMode = false;
 
     Ray ray;
     RaycastHit hit;
@@ -38,7 +41,7 @@ public class Manager : MonoBehaviour
     void SetUI(CinemachineVirtualCamera active){
         camText.text = active.GetComponent<CameraProps>().CameraName;
         
-        if (active.GetComponent<CameraProps>().AllowProbeText && MouseOverProbe()){
+        if (active.GetComponent<CameraProps>().AllowProbeText && MouseOverProbe() == "Probe"){
             Vector3 probePos = Camera.main.WorldToScreenPoint(ParkerSolarProbe.transform.position);
             ProbeText.transform.position = probePos + probeTextOffset;
             double velocity = ParkerSolarProbe.GetComponent<SimpleKeplerOrbits.KeplerOrbitMover>().OrbitData.Velocity.x;
@@ -51,29 +54,56 @@ public class Manager : MonoBehaviour
             BreakText.text = "Press B to destruct Probe";
         }
 
+        if(MouseOverProbe() != "Probe" && MouseOverProbe() != "None"){
+            InformationText.text = MouseOverProbe();
+        } else {
+            InformationText.text = "";
+        }
+
     }
 
-    bool MouseOverProbe(){
+    string MouseOverProbe(){
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if(Physics.Raycast(ray, out hit))
         {
-            return hit.collider.name == "Probe";
+            return hit.collider.name;
         }
-        return false;
+        return "None";
     }
 
     public void SwitchToFinalShot() {
-        CameraPersonScript.ActiveCamIndex = 1;
-        CameraSwitcher.SwitchCam(CameraPersonScript.cameras[1]);
+        CameraPersonScript.ActiveCamIndex = 3;
+        CameraSwitcher.SwitchCam(CameraPersonScript.cameras[3]);
         IsBreaking = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(MouseOverProbe());
+        // if(InspectionMode){
+        //     IsPaused = true;
+        //     MainCamera.enabled = false;
+        // } else {
+        //     MainCamera.enabled = true;
+        // }
         //IsBreaking = ParkerSolarProbe.GetComponent<SimpleKeplerOrbits.KeplerOrbitMover>().IsBreaking;
         activeCam = CameraPersonScript.cameras[CameraPersonScript.ActiveCamIndex];
         SetUI(activeCam);
+        if(CameraPersonScript.ActiveCamIndex == 4) {
+            if(Input.GetKey(KeyCode.D)){
+                activeCam.transform.Rotate(0.0f, 1.0f, 0.0f, Space.Self);
+            }
+            if(Input.GetKey(KeyCode.A)){
+                activeCam.transform.Rotate(0.0f, -1.0f, 0.0f, Space.Self);
+            }
+            if(Input.GetKey(KeyCode.S)){
+                activeCam.transform.Rotate(1.0f, 0.0f, 0.0f, Space.Self);
+            }
+            if(Input.GetKey(KeyCode.W)){
+                activeCam.transform.Rotate(-1.0f, 0.0f, 0.0f, Space.Self);
+            }
+        }
         foreach(GameObject planet in planets) {
             if(IsBreaking) {
                 continue;
