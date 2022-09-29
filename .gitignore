@@ -4,6 +4,10 @@
 #
 #ignore folders
 Screenshots
+Space*Game*Prototype/UserSettings/**/**
+Space*Game*Prototype/UserSettings/**
+
+.gitignore
 
 
 [Ll]ibrary/
@@ -46,6 +50,7 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+*.dwlt
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -63,4 +68,3 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
-
