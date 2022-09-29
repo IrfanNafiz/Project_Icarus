@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.054941878, g: 0.049268633, b: 0.057899386, a: 1}
+  m_IndirectSpecularColor: {r: 0.053152956, g: 0.050175972, b: 0.054744966, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -506,74 +506,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2145173976406217035}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1763852022
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6863381471251359, guid: 83c453250290fc4459346b44d7dc8081, type: 3}
-      propertyPath: m_Name
-      value: User Interface (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3196272781142028010, guid: 83c453250290fc4459346b44d7dc8081,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3196272781142028010, guid: 83c453250290fc4459346b44d7dc8081,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3196272781142028010, guid: 83c453250290fc4459346b44d7dc8081,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3196272781142028010, guid: 83c453250290fc4459346b44d7dc8081,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3196272781142028010, guid: 83c453250290fc4459346b44d7dc8081,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3196272781142028010, guid: 83c453250290fc4459346b44d7dc8081,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3196272781142028010, guid: 83c453250290fc4459346b44d7dc8081,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3196272781142028010, guid: 83c453250290fc4459346b44d7dc8081,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3196272781142028010, guid: 83c453250290fc4459346b44d7dc8081,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3196272781142028010, guid: 83c453250290fc4459346b44d7dc8081,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3196272781142028010, guid: 83c453250290fc4459346b44d7dc8081,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 83c453250290fc4459346b44d7dc8081, type: 3}
 --- !u!1 &1803471706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,6 +1169,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8185887281696020338, guid: 9d5e1f15f4e96c14da48b1229b3e9be4,
+        type: 3}
+      propertyPath: m_Text
+      value: "A Collaboration of \nShahjalal University of Science and Technology,
+        \nDhaka University  \nIslamic University of Technology"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8185887281696020339, guid: 9d5e1f15f4e96c14da48b1229b3e9be4,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75.0272
+      objectReference: {fileID: 0}
+    - target: {fileID: 8185887281696020339, guid: 9d5e1f15f4e96c14da48b1229b3e9be4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -172.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d5e1f15f4e96c14da48b1229b3e9be4, type: 3}
