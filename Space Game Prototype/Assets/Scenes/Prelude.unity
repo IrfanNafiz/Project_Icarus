@@ -407,6 +407,7 @@ GameObject:
   - component: {fileID: 799945922}
   - component: {fileID: 799945923}
   - component: {fileID: 799945924}
+  - component: {fileID: 799945925}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -421,7 +422,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799945921}
-  m_LocalRotation: {x: 0.119884215, y: 0.36212716, z: -0.047025338, w: 0.92319036}
+  m_LocalRotation: {x: 0.1115761, y: 0.8678818, z: -0.22628477, w: 0.42793363}
   m_LocalPosition: {x: -13.487777, y: 12.03891, z: 25.34983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -482,9 +483,31 @@ PlayableDirector:
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
-  m_SceneBindings: []
+  m_SceneBindings:
+  - key: {fileID: -7320515129729964185, guid: 5b5f9800bddd5e7378c20c176bed3f98, type: 2}
+    value: {fileID: 799945925}
   m_ExposedReferences:
     m_References: []
+--- !u!95 &799945925
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799945921}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &800005505
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,8 +712,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322475787}
-  m_LocalRotation: {x: 0.119884215, y: 0.36212716, z: -0.047025338, w: 0.92319036}
-  m_LocalPosition: {x: -5.830695, y: 8.2289, z: -6.2886896}
+  m_LocalRotation: {x: 0.1115761, y: 0.8678818, z: -0.22628477, w: 0.42793363}
+  m_LocalPosition: {x: -22.389729, y: 21.754725, z: 17.184086}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -872,7 +895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 295431464}
-  m_PathPosition: 2.48
+  m_PathPosition: 0
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 0
