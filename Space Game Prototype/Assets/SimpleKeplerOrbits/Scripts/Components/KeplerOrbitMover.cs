@@ -12,6 +12,7 @@ namespace SimpleKeplerOrbits
 	[DisallowMultipleComponent]
 	public class KeplerOrbitMover : MonoBehaviour
 	{
+		private GameObject Manager;
 		/// <summary>
 		/// The attractor settings data.
 		/// Attractor object reference must be assigned or orbit mover will not work.
@@ -42,6 +43,8 @@ namespace SimpleKeplerOrbits
 		public float SpiralRate = 0.01f;
 		
 		public int Cycle = 1;
+		public bool IsBreaking = false;
+		private bool ShouldDecrease = true;
 
 		/// <summary>
 		/// The time scale multiplier.
@@ -124,24 +127,28 @@ namespace SimpleKeplerOrbits
 		/// </remarks>
 
 		private void Start(){
+			Manager = GameObject.Find("GameManager");
 			TimeScale = 100f;
 			AttractorSettings.AttractorMass = 1000f;
 		}
 
 		private void Update()
 		{
-			if(Application.isPlaying) {
-				if(OrbitData.MeanAnomaly > 6.2f) {
-					if(Cycle == 0) Break();
-					Cycle--;
+			if(Application.isPlaying && !(Manager.GetComponent<Manager>().IsPaused)) {
+				if(OrbitData.MeanAnomaly > 3.2f && OrbitData.MeanAnomaly < 3.5f) {
+					ShouldDecrease = true;
+				}
+				if(OrbitData.MeanAnomaly > 6.18f && OrbitData.MeanAnomaly < 6.22f) {
+					if(Cycle <= 0) Break();
+					if(ShouldDecrease) {
+						Cycle--;
+						ShouldDecrease = false;
+					}
 				}
 			}
 
-			if (IsReferencesAsigned)
+			if (IsReferencesAsigned && !(Manager.GetComponent<Manager>().IsPaused))
 			{
-				if(SpiralIn && Application.isPlaying) {
-					AttractorSettings.AttractorMass += SpiralRate;
-				}
 				if (!LockOrbitEditing)
 				{
 					var      pos      = transform.position - AttractorSettings.AttractorObject.position;
@@ -192,6 +199,8 @@ namespace SimpleKeplerOrbits
 			}
 		}
 
+		// End of Update Function
+
 
 		/// <summary>
 		/// Progress orbit path motion.
@@ -208,6 +217,9 @@ namespace SimpleKeplerOrbits
 			{
 				if (IsReferencesAsigned)
 				{
+					if(SpiralIn && Application.isPlaying) {
+						AttractorSettings.AttractorMass += SpiralRate;
+					}
 					if (!OrbitData.IsValidOrbit)
 					{
 						//try to fix orbit if we can.
@@ -379,10 +391,26 @@ namespace SimpleKeplerOrbits
 
 		private void Break()
 		{
-			TimeScale = 1f;
+			IsBreaking = true;
+			// GetComponent<TrailRenderer>().enabled = false;
+			TimeScale = 0.5f;
 			SpiralIn = false;
 			AttractorSettings.AttractorMass = 4000;
+			Manager.GetComponent<Manager>().IsPaused = true;
+			Manager.GetComponent<Manager>().SwitchToFinalShot();
+			StartCoroutine(DestroyMeshCoroutine());
 		}
 
+		IEnumerator DestroyMeshCoroutine() {
+			var destroyable = FindObjectsOfType<MeshDestroy>();
+			while(destroyable.Length > 0) {
+				foreach(MeshDestroy item in destroyable) {
+					if (item.GetComponent<MeshDestroy>().priority == 0) item.GetComponent<MeshDestroy>().DestroyMesh();
+					item.GetComponent<MeshDestroy>().priority -= 1;
+				}
+				yield return new WaitForSeconds(2);
+				destroyable = FindObjectsOfType<MeshDestroy>();
+			}
+		}
 	}
 }

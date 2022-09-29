@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.siccity.gltfutility": {
+      "version": "https://github.com/siccity/gltfutility.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "2.0.0"
+      },
+      "hash": "ac70aeb91915ccb157eedca167b7de8a4b55fd31"
+    },
     "com.unity.cinemachine": {
       "version": "2.8.9",
       "depth": 0,
@@ -52,7 +61,7 @@
     },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.0.2",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
