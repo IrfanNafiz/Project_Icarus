@@ -146,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!96 &8461020729354294518
 TrailRenderer:
-  serializedVersion: 3
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -238,14 +238,11 @@ TrailRenderer:
     numCapVertices: 0
     alignment: 0
     textureMode: 0
-    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
   m_MinVertexDistance: 0.1
-  m_MaskInteraction: 0
   m_Autodestruct: 0
   m_Emitting: 1
-  m_ApplyActiveColorSpace: 0
 --- !u!1 &8461020729354294514
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,7 +715,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 8461020729354651856}
     m_Modifications:
     - target: {fileID: 7543148788220871120, guid: 2eb51f72168cf024aa732544f455e555,
@@ -857,7 +853,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eb51f72168cf024aa732544f455e555, type: 3}
 --- !u!4 &8461020728046116058 stripped
 Transform:

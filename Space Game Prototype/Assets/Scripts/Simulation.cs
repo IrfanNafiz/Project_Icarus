@@ -36,6 +36,7 @@ public class Simulation : MonoBehaviour
 
     public List<StellarBody> bodies = new List<StellarBody>();
     public static Simulation instance;
+    public GameObject gm;
 
     void Start() {
         for(int i = 0; i< Buttons.Length; i++){
@@ -129,16 +130,16 @@ public class Simulation : MonoBehaviour
     }
 
     void Update(){
-
+        if (EndTriggered)
+        {
+            Debug.Log("End Scene");
+            FindObjectOfType<GameManager>().StartGameTransition();
+        }
     }
 
     void FixedUpdate()
     {
-        if(EndTriggered) {
-            Debug.Log("Game Should End Now");
-        }
-
-        if(FlybyHappening){
+        if (FlybyHappening){
             if(physicsTimeStep > 0) physicsTimeStep -= 0.00005f;
             else {
                 physicsTimeStep = 0f;

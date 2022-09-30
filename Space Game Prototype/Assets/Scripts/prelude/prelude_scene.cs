@@ -81,9 +81,10 @@ public class prelude_scene : MonoBehaviour
 
         if( current_focused_object == "sun" && init_anim_sun_complete ) {
             camera_switcher.switchCamera(round_cam_sun);
+            mainMenuUI.SetActive(true);
         }
 
-        if( Input.GetKeyDown(KeyCode.S) ) {
+        if ( Input.GetKeyDown(KeyCode.S) ) {
             StartSunSequence();
         }
   

@@ -5,7 +5,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4644f23cf7e56744d909f297fb97fd97,
@@ -89,7 +88,6 @@ PrefabInstance:
       value: Venus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 4644f23cf7e56744d909f297fb97fd97, type: 3}
 --- !u!1 &2406694445779507382 stripped
 GameObject:
