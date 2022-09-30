@@ -46,8 +46,10 @@ public class Simulation : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log(gameObject.name);
         TargetCamera.GetComponent<CameraFollow>().enabled = true;
         TargetCamera.GetComponent<FirstPersonCameraRotation>().enabled = false;
+
 
         StellarBody[] bodies_arr = FindObjectsOfType<StellarBody>();
         
