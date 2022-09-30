@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 954157430}
-  m_IndirectSpecularColor: {r: 0.053152956, g: 0.050175972, b: 0.054744966, a: 1}
+  m_IndirectSpecularColor: {r: 0.054941878, g: 0.049268633, b: 0.057899386, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -912,6 +912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b796774079ce59746a7143281511f8ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InfoText: {fileID: 0}
 --- !u!108 &954157430 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 6073400688254379889, guid: 01a5daa0225e0974d804d7a9d84eaa68,
@@ -1400,6 +1401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b796774079ce59746a7143281511f8ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InfoText: {fileID: 0}
 --- !u!850595691 &1586847805
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1745,6 +1747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b796774079ce59746a7143281511f8ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InfoText: {fileID: 0}
 --- !u!1 &1892936882
 GameObject:
   m_ObjectHideFlags: 0
@@ -8854,6 +8857,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sun
       objectReference: {fileID: 0}
+    - target: {fileID: 8574668145826939097, guid: 01a5daa0225e0974d804d7a9d84eaa68,
+        type: 3}
+      propertyPath: m_Flare
+      value: 
+      objectReference: {fileID: 12100000, guid: 54fbbf098d116effa00081aba8ad6659,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 6073400688530321780, guid: 01a5daa0225e0974d804d7a9d84eaa68, type: 3}
     - {fileID: 6073400688530321784, guid: 01a5daa0225e0974d804d7a9d84eaa68, type: 3}
