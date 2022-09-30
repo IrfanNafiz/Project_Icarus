@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Playables;
 using Cinemachine;
 using Unity.VisualScripting;
+using TMPro;
 
 public class scene : MonoBehaviour
 {
@@ -22,12 +23,19 @@ public class scene : MonoBehaviour
     public GameObject gm;
 
     public bool launched = false;
+    public TMP_Text InfoText;
+
 
     public bool init_anim_complete = false;
+
+    public GameObject[] POI;
+    public Button[] Buttons;
 
     // Start is called before the first frame update
     void Start()
     {
+        HideButtons();
+
         init_anim = init_cam.GetComponent<PlayableDirector>();
         round_anim = round_cam.GetComponent<PlayableDirector>();
         takeoff_script = rocket.GetComponent<takeoff>();
@@ -47,6 +55,7 @@ public class scene : MonoBehaviour
         camera_switcher.register(round_cam);
 
         camera_switcher.switchCamera(init_cam);
+        // init_anim_complete = true;
 
         init_anim.stopped += OnInitAnimStopped;
 
@@ -57,6 +66,28 @@ public class scene : MonoBehaviour
     void OnInitAnimStopped(PlayableDirector anim)
     {
         init_anim_complete = true;
+
+    }
+
+    void HideButtons(){
+        for(int i = 0; i<Buttons.Length; i++) {
+            Buttons[i].GetComponent<Image>().enabled = false;
+        }
+    }
+
+    void SetUI(){
+        for(int i = 0; i< POI.Length; i++) {
+            Vector3 ScreenPos = Camera.main.WorldToScreenPoint(POI[i].transform.position);
+            Vector3 viewPos = Camera.main.WorldToViewportPoint(POI[i].transform.position);
+            if (viewPos.z > 0)
+            {
+                Buttons[i].transform.position = ScreenPos;
+                Buttons[i].GetComponent<Image>().enabled = true;
+                
+            } else {
+                Buttons[i].GetComponent<Image>().enabled = false;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -67,8 +98,10 @@ public class scene : MonoBehaviour
             camera_switcher.switchCamera(round_cam);
             mainMenuUI.SetActive(true);
             launched = true;
+            SetUI();
+        } else {
+            HideButtons();
         }
-
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             LaunchStart();
