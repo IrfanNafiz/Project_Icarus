@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using TMPro;
 
 public class Simulation : MonoBehaviour
@@ -128,7 +129,7 @@ public class Simulation : MonoBehaviour
     }
 
     void Update(){
-        Cursor.lockState = CursorLockMode.Locked;
+
     }
 
     void FixedUpdate()
@@ -175,10 +176,10 @@ public class Simulation : MonoBehaviour
             if(physicsTimeStep < 0.01f) physicsTimeStep += 0.00008f;
             else physicsTimeStep = 0.01f;
         }
-        Debug.Log("Sim name: " + name + " body count: " + bodies.Count);
+        // Debug.Log("Sim name: " + name + " body count: " + bodies.Count);
         foreach (StellarBody body in bodies)
         {
-            Debug.Log("bodies: " + body.bodyName);
+            // Debug.Log("bodies: " + body.bodyName);
         }
         
         for (int i = 0; i < bodies.Count; i++)

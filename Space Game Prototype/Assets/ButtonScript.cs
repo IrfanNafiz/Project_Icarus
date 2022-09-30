@@ -29,7 +29,7 @@ public class ButtonScript : MonoBehaviour
         GetComponent<Image>().enabled = true;
     }
 
-    void ShowText() {
+    public void ShowText() {
         child.SetActive(!showing);
         showing = true;
     }
