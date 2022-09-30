@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()    // only for intro dialogue as shown above
     {
+        Screen.SetResolution(1920, 1080, true);
         Time.timeScale = 1f;
     }
 
