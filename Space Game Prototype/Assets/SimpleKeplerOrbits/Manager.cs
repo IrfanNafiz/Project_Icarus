@@ -31,6 +31,7 @@ public class Manager : MonoBehaviour
     private bool InspectionMode = false;
 
     public int FinalShotIndex = 1;
+    public int BreakAfter = 4;
 
     Ray ray;
     RaycastHit hit;
@@ -79,9 +80,20 @@ public class Manager : MonoBehaviour
         IsBreaking = true;
     }
 
+    IEnumerator EndTrigger(){
+        yield return new WaitForSeconds(5f);
+        Debug.Log("Should End Now");
+    }
+
     // Update is called once per frame
     void Update()
     {
+        var destroyable = FindObjectsOfType<MeshDestroy>();
+        if(destroyable.Length > 0){
+            if(MeshDestroy.BreakCounter >= BreakAfter){
+			    StartCoroutine(EndTrigger());
+            }
+        }
         Debug.Log(MouseOverProbe());
         // if(InspectionMode){
         //     IsPaused = true;

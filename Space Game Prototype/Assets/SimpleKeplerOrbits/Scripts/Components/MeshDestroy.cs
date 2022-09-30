@@ -14,6 +14,8 @@ public class MeshDestroy : MonoBehaviour
     public float ExplodeForce = 0;
     public int priority = 0;
 
+    public static int BreakCounter = 0;
+
     // public Material DisintegrateMaterial;
 
     // Start is called before the first frame update
@@ -28,6 +30,7 @@ public class MeshDestroy : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.B))
         {
             Apart();
+            BreakCounter++;
         }
     }
 
