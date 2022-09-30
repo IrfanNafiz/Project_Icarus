@@ -24,6 +24,7 @@ public class Manager : MonoBehaviour
 
     public GameObject CameraPerson;
     private CameraPerson CameraPersonScript;
+    public GameObject gm;
 
     public Vector3 probeTextOffset;
 
@@ -83,6 +84,7 @@ public class Manager : MonoBehaviour
     IEnumerator EndTrigger(){
         yield return new WaitForSeconds(5f);
         Debug.Log("Should End Now");
+        gm.GetComponent<GameManager>().StartGameTransition();
     }
 
     // Update is called once per frame

@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGameTransition()
     {
-        FindObjectOfType<AudioManager>().Play("ButtonPress");
+        //FindObjectOfType<AudioManager>().Play("ButtonPress");
         //Debug.Log("Game is starting...");
         menuChangeUI.SetActive(true); //LoadNextLevel function is called from animation from NextLevel script
     }

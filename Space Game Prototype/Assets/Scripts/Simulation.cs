@@ -133,7 +133,7 @@ public class Simulation : MonoBehaviour
         if (EndTriggered)
         {
             Debug.Log("End Scene");
-            FindObjectOfType<GameManager>().StartGameTransition();
+            gm.GetComponent<GameManager>().StartGameTransition();
         }
     }
 
