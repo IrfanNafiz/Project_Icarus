@@ -20,9 +20,6 @@ public class scene : MonoBehaviour
     public GameObject mainMenuUI;
     public GameObject UI;
 
-    public GameObject gm;
-
-    public bool launched = false;
     public TMP_Text InfoText;
 
 
@@ -93,11 +90,10 @@ public class scene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (init_anim_complete && launched == false)
+        if (init_anim_complete)
         {
             camera_switcher.switchCamera(round_cam);
             mainMenuUI.SetActive(true);
-            launched = true;
             SetUI();
         } else {
             HideButtons();
@@ -110,7 +106,7 @@ public class scene : MonoBehaviour
 
     public void LaunchStart()
     {
-        mainMenuUI.SetActive(false);
+        UI.SetActive(false);
         FindObjectOfType<AudioManager>().Play("Countdown");
         Invoke("Launch", 10.0f);
     }
@@ -121,13 +117,6 @@ public class scene : MonoBehaviour
         foreach (ParticleSystem p in rocket_flames) p.Play();
         foreach (ParticleSystem p in floor_smokes) p.Play();
         takeoff_script.launch();
-
-        Invoke("NextScene", 15.0f);
-    }
-
-    public void NextScene()
-    {
-        FindObjectOfType<GameManager>().StartGameTransition();
     }
 
 }
