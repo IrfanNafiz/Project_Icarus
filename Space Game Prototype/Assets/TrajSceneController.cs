@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
+// using Unity.Mathematics;
 using UnityEngine;
 
 public class TrajSceneController : MonoBehaviour
@@ -20,8 +20,8 @@ public class TrajSceneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        velocity = math.floor(shooter.GetComponent<shooter>().velocity);
-        angle = math.floor(shooter.GetComponent<shooter>().angle);
+        velocity = Mathf.Floor(shooter.GetComponent<shooter>().velocity);
+        angle = Mathf.Floor(shooter.GetComponent<shooter>().angle);
         if (velocity == winVelocity && angle == winAngle)
         {
             winCriteria = true;
