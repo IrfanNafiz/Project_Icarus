@@ -24,5 +24,8 @@ public class PSPExclusive : MonoBehaviour
         if(other.gameObject.tag == "EndTrigger") {
             Simulator.GetComponent<Simulation>().EndTriggered = true;
         }
+        if(other.name == "CoronaTrigger") {
+            Simulator.GetComponent<Simulation>().ActivateCorona();
+        }
     }
 }

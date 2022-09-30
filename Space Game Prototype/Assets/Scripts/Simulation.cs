@@ -120,6 +120,16 @@ public class Simulation : MonoBehaviour
         Debug.Log("Button Pressed: " + name);
     }
 
+    public void ActivateCorona(){
+        InstructionText.text = "";
+        FlybyVideo.SetActive(false);
+        CoronalVideo.SetActive(true);
+        VideoTitle.text = "Encountering Solar Coronal Stream";
+    }
+
+    void Update(){
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 
     void FixedUpdate()
     {
@@ -139,10 +149,10 @@ public class Simulation : MonoBehaviour
                 FlybyVideo.SetActive(true);
                 VideoTitle.text = "Venus Flyby";
                 if(Input.GetKeyDown(KeyCode.F)){
-                    InstructionText.text = "";
-                    FlybyVideo.SetActive(false);
-                    CoronalVideo.SetActive(true);
-                    VideoTitle.text = "Encountering Solar Coronal Stream";
+                    // InstructionText.text = "";
+                    // FlybyVideo.SetActive(false);
+                    // CoronalVideo.SetActive(true);
+                    // VideoTitle.text = "Encountering Solar Coronal Stream";
                     TargetCamera.GetComponent<FirstPersonCameraRotation>().enabled = false;
                     TargetCamera.GetComponent<CameraFollow>().enabled = true;
                     Prompted = true;
