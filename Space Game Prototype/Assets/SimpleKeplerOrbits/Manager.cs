@@ -30,6 +30,8 @@ public class Manager : MonoBehaviour
     private bool IsBreaking = false;
     private bool InspectionMode = false;
 
+    public int FinalShotIndex = 1;
+
     Ray ray;
     RaycastHit hit;
     // Start is called before the first frame update
@@ -45,7 +47,7 @@ public class Manager : MonoBehaviour
             Vector3 probePos = Camera.main.WorldToScreenPoint(ParkerSolarProbe.transform.position);
             ProbeText.transform.position = probePos + probeTextOffset;
             double velocity = ParkerSolarProbe.GetComponent<SimpleKeplerOrbits.KeplerOrbitMover>().OrbitData.Velocity.x;
-            ProbeText.text = "Velocity: " + Mathf.Abs(Mathf.Round((float)velocity * 10000f) * (1/10000f)).ToString();
+            ProbeText.text = "Velocity: " + Mathf.Abs(Mathf.Round((float)velocity * (float)(692000/1.54398) * 10000f) * (1/10000f)).ToString() + " km/h";
         } else {
             ProbeText.text = "";
         }
@@ -72,8 +74,8 @@ public class Manager : MonoBehaviour
     }
 
     public void SwitchToFinalShot() {
-        CameraPersonScript.ActiveCamIndex = 3;
-        CameraSwitcher.SwitchCam(CameraPersonScript.cameras[3]);
+        CameraPersonScript.ActiveCamIndex = FinalShotIndex;
+        CameraSwitcher.SwitchCam(CameraPersonScript.cameras[FinalShotIndex]);
         IsBreaking = true;
     }
 

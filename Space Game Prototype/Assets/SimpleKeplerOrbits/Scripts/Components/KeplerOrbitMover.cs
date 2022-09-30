@@ -400,6 +400,12 @@ namespace SimpleKeplerOrbits
 			AttractorSettings.AttractorMass = 4000;
 			Manager.GetComponent<Manager>().SwitchToFinalShot();
 			// StartCoroutine(DestroyMeshCoroutine());
+			StartCoroutine(EndTrigger());
+		}
+
+		IEnumerator EndTrigger(){
+			yield return new WaitForSeconds(5f);
+			Debug.Log("Should End Now");
 		}
 
 		IEnumerator DestroyMeshCoroutine() {

@@ -345,7 +345,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451635807}
-  m_LocalRotation: {x: -0.00017782734, y: -0.3415251, z: -0.0000646178, w: 0.9398726}
+  m_LocalRotation: {x: -0.00017782734, y: -0.34152514, z: -0.00006461781, w: 0.9398726}
   m_LocalPosition: {x: 12.033164, y: 0, z: -0.26708198}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -895,8 +895,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599479022}
-  m_LocalRotation: {x: -0.00863639, y: 0.88731426, z: -0.016630748, w: -0.4607845}
-  m_LocalPosition: {x: 15.156973, y: 1.0961509, z: 6.227583}
+  m_LocalRotation: {x: -0.00863639, y: 0.8873142, z: -0.016630748, w: -0.46078447}
+  m_LocalPosition: {x: 15.15697, y: 1.0961509, z: 6.227582}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8483,6 +8483,7 @@ MonoBehaviour:
   InformationText: {fileID: 1197451131}
   CameraPerson: {fileID: 1923150631}
   probeTextOffset: {x: -48, y: 96, z: 0}
+  FinalShotIndex: 1
 --- !u!4 &1923414867
 Transform:
   m_ObjectHideFlags: 0
