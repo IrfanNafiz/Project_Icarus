@@ -71,7 +71,7 @@ Material:
     - _OcclusionStrength: 1
     - _Offset: 0.27
     - _Parallax: 0.02
-    - _Rep: 0.05
+    - _Rep: 0.08
     - _RepeatCount: 100
     - _Sharpness: 100
     - _SmoothnessTextureChannel: 0
