@@ -13,6 +13,7 @@ public class circle_around : MonoBehaviour
 
     private void Start()
     {
+        cam = GetComponent<CinemachineVirtualCamera>();
         dolly = cam.GetCinemachineComponent<CinemachineTrackedDolly>();
         Debug.Log(dolly);
     }
