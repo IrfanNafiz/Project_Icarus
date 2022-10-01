@@ -8662,6 +8662,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sun
       objectReference: {fileID: 0}
+    - target: {fileID: 8574668145826939097, guid: 01a5daa0225e0974d804d7a9d84eaa68,
+        type: 3}
+      propertyPath: m_Flare
+      value: 
+      objectReference: {fileID: 12100000, guid: 54fbbf098d116effa00081aba8ad6659,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 6073400688530321780, guid: 01a5daa0225e0974d804d7a9d84eaa68, type: 3}
     - {fileID: 6073400688530321784, guid: 01a5daa0225e0974d804d7a9d84eaa68, type: 3}
