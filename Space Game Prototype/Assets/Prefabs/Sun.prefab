@@ -453,6 +453,7 @@ MonoBehaviour:
   initialVelocity: {x: 0, y: 0, z: 0}
   bodyName: Sun
   surfaceGravity: 20
+  mass: 0
   currentVelocity: {x: 0, y: 0, z: 0}
 --- !u!114 &6073400688530321787
 MonoBehaviour:

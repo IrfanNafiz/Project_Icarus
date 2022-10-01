@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -331,7 +331,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -384,7 +383,7 @@ MonoBehaviour:
   restartDelay: 2
   sceneBeginUI: {fileID: 0}
   completeLevelUI: {fileID: 0}
-  gameoverLevelUI: {fileID: 0}
+  gameoverLevelUI: {fileID: 5944882779029039748}
   menuChangeUI: {fileID: 0}
 --- !u!1 &2320666220435080808
 GameObject:
@@ -820,7 +819,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 99a7c565d62bd0a448d63c0e3189d1ad, type: 3}
+  m_Texture: {fileID: 2800000, guid: abe2ee8da37328f4f9e6682711818533, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1060,6 +1059,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: -1
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0

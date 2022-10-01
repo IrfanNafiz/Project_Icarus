@@ -8,17 +8,22 @@ using TMPro;
 
 public class ButtonScript : MonoBehaviour
 {
-    GameObject child;
+    GameObject child0, child1;
     private bool showing = false;
     public TMP_Text InfoText = null;
     // Start is called before the first frame update
     void Start()
     {
-        child = transform.GetChild(0).gameObject;
-        if(SceneManager.GetActiveScene().name == "a") {
-            GetComponent<Button>().onClick.AddListener(LaunchPOI);
+        
+        if(SceneManager.GetActiveScene().name == "Venus Flyby") {
+            GetComponent<Button>().onClick.AddListener(Fly);
+            child0 = transform.GetChild(0).gameObject;
         }
-        else GetComponent<Button>().onClick.AddListener(ShowText);
+        else{
+            GetComponent<Button>().onClick.AddListener(ShowText);
+            child0 = transform.GetChild(0).gameObject;
+            child1 = transform.GetChild(1).gameObject;
+        } 
     }
 
     // Update is called once per frame
@@ -27,8 +32,9 @@ public class ButtonScript : MonoBehaviour
         
     }
 
-    public void LaunchPOI(){
-        InfoText.text = child.GetComponent<TMP_Text>().text;
+    public void Fly(){
+        child0.SetActive(!showing);
+        showing = !showing;
     }
 
     private void OnBecameInvisible() {
@@ -40,20 +46,21 @@ public class ButtonScript : MonoBehaviour
     }
 
     public void ShowText() {
-        child.SetActive(!showing);
+        child0.SetActive(!showing);
+        child1.SetActive(!showing);
         showing = !showing;
     }
 
     public void Deactivate() {
-        child.SetActive(false);
+        child0.SetActive(false);
     }
 
     private void OnMouseOver() {
-        child.SetActive(true);
+        child0.SetActive(true);
     }
 
     private void OnMouseExit() {
-        child.SetActive(false);
+        child0.SetActive(false);
     }
 
     

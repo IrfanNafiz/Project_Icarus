@@ -129,4 +129,5 @@ MonoBehaviour:
   initialVelocity: {x: 0, y: 0, z: 1}
   bodyName: Venus
   surfaceGravity: 5
+  mass: 2.697098e+12
   currentVelocity: {x: 0, y: 0, z: 0}

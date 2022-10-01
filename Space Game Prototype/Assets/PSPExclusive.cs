@@ -4,28 +4,36 @@ using UnityEngine;
 
 public class PSPExclusive : MonoBehaviour
 {
-    public GameObject Simulator;
+    public Simulation simp;
+    public Transform target;
+    public float speed = 10.69f;
+
+    private Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        var delta = (target.position - transform.position);
+        delta.Normalize();
+        delta = delta * speed * simp.physicsTimeStep;
+
+        rb.MovePosition(transform.position + delta);
     }
 
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "Venus") {
-            Simulator.GetComponent<Simulation>().FlybyHappening = true;
+            simp.FlybyHappening = true;
         }
         if(other.gameObject.tag == "EndTrigger") {
-            Simulator.GetComponent<Simulation>().EndTriggered = true;
+            simp.EndTriggered = true;
         }
         if(other.name == "CoronaTrigger") {
-            Simulator.GetComponent<Simulation>().ActivateCorona();
+            simp.ActivateCorona();
         }
     }
 }

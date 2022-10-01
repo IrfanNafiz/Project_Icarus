@@ -20,6 +20,9 @@ public class TrajSceneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.K)){
+            Invoke("NextScene", 2.0f);
+        }
         velocity = Mathf.Floor(shooter.GetComponent<shooter>().velocity);
         angle = Mathf.Floor(shooter.GetComponent<shooter>().angle);
         if (velocity == winVelocity && angle == winAngle)

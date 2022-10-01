@@ -8,7 +8,7 @@ using TMPro;
 
 public class Simulation : MonoBehaviour
 {
-    public static float physicsTimeStep = 0.01f;
+    public float physicsTimeStep = 0.01f;
     public string name = "default";
     public bool FlybyHappening = false;
     
@@ -141,6 +141,7 @@ public class Simulation : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(Input.GetKeyDown(KeyCode.K)) EndTriggered = true;
         if (FlybyHappening){
             if(physicsTimeStep > 0) physicsTimeStep -= 0.00005f;
             else {
@@ -182,7 +183,7 @@ public class Simulation : MonoBehaviour
         // Debug.Log("Sim name: " + name + " body count: " + bodies.Count);
         foreach (StellarBody body in bodies)
         {
-            // Debug.Log("bodies: " + body.bodyName);
+            Debug.Log("bodies: " + body.bodyName);
         }
         
         for (int i = 0; i < bodies.Count; i++)

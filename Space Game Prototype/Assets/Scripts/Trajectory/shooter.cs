@@ -6,7 +6,7 @@ public class shooter : MonoBehaviour
 {
 
     public GameObject ball, simulation_container;
-    public Simulation simulation;
+    public SimulationTrajectory simulation;
     private List<GameObject> instances = new List<GameObject>();
     private int ballCount = 0;
     public float velocity = 0f, angle = 90f;
@@ -26,7 +26,7 @@ public class shooter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        simulation = simulation_container.GetComponent<Simulation>();
+        simulation = simulation_container.GetComponent<SimulationTrajectory>();
         Debug.Log(simulation_container);
         Debug.Log(simulation);
     }
@@ -64,18 +64,18 @@ public class shooter : MonoBehaviour
 
         if( Input.GetKey(KeyCode.UpArrow) )
         {
-            velocity += 0.1f;
+            velocity += 1f;
         } else if( Input.GetKey(KeyCode.DownArrow) )
         {
-            velocity -= 0.1f;
+            velocity -= 1f;
         } 
         
         if( Input.GetKey( KeyCode.LeftArrow ) )
         {
-            angle += 0.1f;
+            angle += 1f;
         } else if (Input.GetKey(KeyCode.RightArrow))
         {
-            angle -= 0.1f;
+            angle -= 1f;
         }
 
         velocity_vector.x = Mathf.Cos(Mathf.Deg2Rad * angle);

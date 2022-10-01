@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class StellarBody : MonoBehaviour
 {
-    public static float gravConstant = 6.67384e-11f;
+    public static float gravConstant = 6.67384e-8f;
 
     private Rigidbody rb;
     public float radius;
@@ -14,12 +14,13 @@ public class StellarBody : MonoBehaviour
     public string bodyName = "Unnamed";
     public float surfaceGravity;
     Transform meshHolder;
-    public float mass { get; private set; }
+    public float mass;
     public Vector3 currentVelocity; // { get; public set; }
 
 
     private void Awake()
     {
+        Debug.Log("Gravy: " + gravConstant);
         initialize();
     }
 
@@ -27,7 +28,7 @@ public class StellarBody : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         currentVelocity = initialVelocity;
-        rb.mass = mass;
+        // mass = rb.mass;
     }
 
     public void UpdateVelocity(StellarBody[] allBodies, float timeStep)
@@ -59,7 +60,7 @@ public class StellarBody : MonoBehaviour
     void OnValidate() //Understand what this means and decide on what to do, 
                         //it caused the clouds to transform scale according to radius set when played (OnValidate effect)
     {
-        mass = surfaceGravity * radius * radius / gravConstant;
+        // mass = surfaceGravity * radius * radius / gravConstant;
         //meshHolder = transform.GetChild(1);
         //meshHolder.localScale = Vector3.one * radius;
         //meshHolder = transform.GetChild(0);

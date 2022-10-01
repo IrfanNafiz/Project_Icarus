@@ -5,6 +5,7 @@ using Random = UnityEngine.Random;
 
 public class AudioManager : MonoBehaviour
 {
+
     public Sound[] sounds;
     //private AudioSource audioSource;
 
@@ -34,6 +35,17 @@ public class AudioManager : MonoBehaviour
             s.source.loop = s.loop;
             s.source.outputAudioMixerGroup = s.audioMixerGroup;
         }
+    }
+
+    public bool FinishedPlaying(string sourceName) {
+        foreach(Sound s in sounds) {
+            if (s.name == sourceName) {
+                Debug.Log("source info: " + s.source.clip.length + " + " + s.source.time + " + " );
+                return s.source.time >= s.source.clip.length;
+            }
+        }
+
+        return false;
     }
 
     void Start()
@@ -101,4 +113,11 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     } // so now we can play any audioclip with given name from anywhere in our 
       // scripts using FindObjectOfType<AudioManager>().Play("place_name_of_clip_here")
+
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+
+        s.source.Stop();
+    }
 }

@@ -132,6 +132,7 @@ MonoBehaviour:
   initialVelocity: {x: 1, y: 0, z: 0}
   bodyName: Moon
   surfaceGravity: 1.67
+  mass: 2.5023074e+10
   currentVelocity: {x: 0, y: 0, z: 0}
 --- !u!96 &7543148788220871120
 TrailRenderer:

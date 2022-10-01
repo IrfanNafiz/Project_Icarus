@@ -60,21 +60,84 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: ButtonPress
-    clip: {fileID: 8300000, guid: 5ca1cfb158496de4888446aebabadcc8, type: 3}
+    clip: {fileID: 8300000, guid: 82532579eb4a00148929fc6f0ac1f30c, type: 3}
     audioMixerGroup: {fileID: 24300002, guid: bd96cc3b8bee15845b4a931900c7ea70, type: 2}
     volume: 0.262
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Countdown
-    clip: {fileID: 8300000, guid: 683ac423c7fe2474aa2295076132a8a9, type: 3}
+    clip: {fileID: 8300000, guid: 41bdaaaf31a1797479aa667f7dea219b, type: 3}
     audioMixerGroup: {fileID: 24300002, guid: bd96cc3b8bee15845b4a931900c7ea70, type: 2}
     volume: 0.262
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Launch
-    clip: {fileID: 8300000, guid: 995d8ca25d3748f42afe88dca045312e, type: 3}
+    clip: {fileID: 8300000, guid: fc35180b0bcf7c54c8be7ae0ae3229ca, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: bd96cc3b8bee15845b4a931900c7ea70, type: 2}
+    volume: 0.262
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: narratorintro
+    clip: {fileID: 8300000, guid: 7fc8801fd0191f049877cc7a1718709e, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: bd96cc3b8bee15845b4a931900c7ea70, type: 2}
+    volume: 0.262
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: 1intro
+    clip: {fileID: 8300000, guid: 41fb27021d30ce146a5217f829e2ddae, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: bd96cc3b8bee15845b4a931900c7ea70, type: 2}
+    volume: 0.262
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: 1objective
+    clip: {fileID: 8300000, guid: 73de066a9bc0f7042b424caac9d13463, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: bd96cc3b8bee15845b4a931900c7ea70, type: 2}
+    volume: 0.262
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: 1feelfree
+    clip: {fileID: 8300000, guid: 18c2aae2bacc0b647af232273440448d, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: bd96cc3b8bee15845b4a931900c7ea70, type: 2}
+    volume: 0.262
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: 1launch1
+    clip: {fileID: 8300000, guid: f63e1bc2c52ca0444a2cb2a87c17d5d4, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: bd96cc3b8bee15845b4a931900c7ea70, type: 2}
+    volume: 0.262
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: 1launch2
+    clip: {fileID: 8300000, guid: d3c3d927a3d232e42bacef7e7a72a4b4, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: bd96cc3b8bee15845b4a931900c7ea70, type: 2}
+    volume: 0.262
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: 1prelaunch1
+    clip: {fileID: 8300000, guid: 40ad5d86b92c4b04bafb9d6b2bdb0bbd, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: bd96cc3b8bee15845b4a931900c7ea70, type: 2}
+    volume: 0.262
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: 1prelaunch2
+    clip: {fileID: 8300000, guid: 2a097a3f4d890d24fa866cda6712dfb3, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: bd96cc3b8bee15845b4a931900c7ea70, type: 2}
+    volume: 0.262
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: 1transition
+    clip: {fileID: 8300000, guid: ceab232173b1c3d4eb25cb3be639b16b, type: 3}
     audioMixerGroup: {fileID: 24300002, guid: bd96cc3b8bee15845b4a931900c7ea70, type: 2}
     volume: 0.262
     pitch: 1

@@ -867,6 +867,7 @@ MonoBehaviour:
   initialVelocity: {x: 0, y: 0, z: 12}
   bodyName: PSP
   surfaceGravity: 1.67
+  mass: 2.5023074e+10
   currentVelocity: {x: 0, y: 0, z: 0}
 --- !u!1 &6419695160147136771
 GameObject:
