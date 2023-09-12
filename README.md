@@ -48,11 +48,14 @@ The repo contains the total project files for the Icarus Project, based on Unity
 ## Development Process
 At first we designed the game from a high-level overview. We planned the sequence of the game levels such as  Rocket Launching, Trajectory Setting, Venus Flyby, Death Plunge etc. Then we added details to our levels.
 
-At first we created a project in Unity Game Engine. Then we separately developed these 4 levels and merged them into a single game.
-### Rocket Launching: In this level, we created a 3D model of Delta 4 Rocket in Blender and Import this model in Unity. To fire up the rocket we used Unity’s Particle System to simulate the smoke and fire. Then we used Unity’s Physics System to animate the acceleration of the rocket.
-### Trajectory Setting: After the rocket leaving the Earth, the user has to set the trajectory of the Solar Probe. We used the model of the solar probe provided on the NASA website. In C# language we scripted the process of trajectory traversing of Parker Solar Probe. In the scripting process we developed an N-body Simulator from scratch which allows the solar probe to perfectly traverse the trajectory according to the laws of gravitation.
-### Venus Flyby: The 3D model of Venus is obtained from NASA provided data. We used our previously developed N-body Simulator to simulate the process of Venus Flyby.
-### Death Plunge: After Venus flyby Parker Solar Probe will eventually be directed towards the sun. The part by part destruction of the solar probe is also scripted in C# language.
+### Rocket Launching: 
+In this level, we created a 3D model of Delta 4 Rocket in Blender and Import this model in Unity. To fire up the rocket we used Unity’s Particle System to simulate the smoke and fire. Then we used Unity’s Physics System to animate the acceleration of the rocket.
+### Trajectory Setting:
+After the rocket leaving the Earth, the user has to set the trajectory of the Solar Probe. We used the model of the solar probe provided on the NASA website. In C# language we scripted the process of trajectory traversing of Parker Solar Probe. In the scripting process we developed an N-body Simulator from scratch which allows the solar probe to perfectly traverse the trajectory according to the laws of gravitation.
+### Venus Flyby:
+The 3D model of Venus is obtained from NASA provided data. We used our previously developed N-body Simulator to simulate the process of Venus Flyby.
+### Death Plunge:
+After Venus flyby Parker Solar Probe will eventually be directed towards the sun. The part by part destruction of the solar probe is also scripted in C# language.
 ### Added a fully voiced virtual assistant that instructs and guides the player experience. 
 
 
