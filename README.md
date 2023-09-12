@@ -3,7 +3,7 @@
 ## Abstract
 Project "Icarus" aspires to educate the youth on the journey that touched the Sun by Parker Solar Probe. The historical mission that sent a solar probe, made by man, closer to the Sun than anything before. It achieves this by means of a videogame experience, that includes multiple segments of the mission, and makes it an immersive and interactive experience to learn and be fascinated by the milestone mission, via means of Virtual Reality, Computer Simulation and Augmented Reality. We propose the current prototype game 'Icarus', an immersive N-Body Simulator and VideoGame, that we developed to manifest that aspiration, with further future improvements to create our vision of space education.
 
-Selected as Global Nominee in NASA Space Apps Challenge 2022! <br>
+Selected as Global Nominee and Regional Champion in NASA Space Apps Challenge 2022! (among the top 420 teams from +220,000 registrants worldwide) <br>
 Visit the [NASA Website](https://2022.spaceappschallenge.org/challenges/2022-challenges/on-the-way-to-the-sun/teams/team-icarus/project) for details. <br>
 View our [30 second video](https://www.youtube.com/watch?v=_Yc1IiDZc7k&feature=youtu.be&ab_channel=IrfanNafiz) submission.
 
