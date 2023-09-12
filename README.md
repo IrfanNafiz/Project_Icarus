@@ -3,6 +3,9 @@
 ## Abstract
 Project "Icarus" aspires to educate the youth on the journey that touched the Sun by Parker Solar Probe. The historical mission that sent a solar probe, made by man, closer to the Sun than anything before. It achieves this by means of a videogame experience, that includes multiple segments of the mission, and makes it an immersive and interactive experience to learn and be fascinated by the milestone mission, via means of Virtual Reality, Computer Simulation and Augmented Reality. We propose the current prototype game 'Icarus', an immersive N-Body Simulator and VideoGame, that we developed to manifest that aspiration, with further future improvements to create our vision of space education.
 
+Visit the [NASA Website](https://2022.spaceappschallenge.org/challenges/2022-challenges/on-the-way-to-the-sun/teams/team-icarus/project) for details.
+View our [30 second video](https://www.youtube.com/watch?v=_Yc1IiDZc7k&feature=youtu.be&ab_channel=IrfanNafiz) submission.
+
 ## Installation
 Work in Progress...
 From the builds folder, download the latest setup.exe file. Run the setup and install the game and play!
@@ -50,12 +53,20 @@ At first we designed the game from a high-level overview. We planned the sequenc
 
 ### Rocket Launching: 
 In this level, we created a 3D model of Delta 4 Rocket in Blender and Import this model in Unity. To fire up the rocket we used Unity’s Particle System to simulate the smoke and fire. Then we used Unity’s Physics System to animate the acceleration of the rocket.
+![image](https://github.com/IrfanNafiz/Project_Icarus/assets/63298621/420860cf-3490-431c-a1ff-dfe7ac619935)
+
 ### Trajectory Setting:
 After the rocket leaving the Earth, the user has to set the trajectory of the Solar Probe. We used the model of the solar probe provided on the NASA website. In C# language we scripted the process of trajectory traversing of Parker Solar Probe. In the scripting process we developed an N-body Simulator from scratch which allows the solar probe to perfectly traverse the trajectory according to the laws of gravitation.
+![image](https://github.com/IrfanNafiz/Project_Icarus/assets/63298621/0c57fe80-05b2-418e-bfcf-a3531f5f5842)
+
 ### Venus Flyby:
 The 3D model of Venus is obtained from NASA provided data. We used our previously developed N-body Simulator to simulate the process of Venus Flyby.
+![image](https://github.com/IrfanNafiz/Project_Icarus/assets/63298621/8d2ff0b5-d59b-4063-9ed0-407d12bd3aa4)
+
 ### Death Plunge:
 After Venus flyby Parker Solar Probe will eventually be directed towards the sun. The part by part destruction of the solar probe is also scripted in C# language.
+![image](https://github.com/IrfanNafiz/Project_Icarus/assets/63298621/74cdb50b-7b75-4bcd-83a5-3f6b226ec8a0)
+
 ### Added a fully voiced virtual assistant that instructs and guides the player experience. 
 
 
